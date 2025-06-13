@@ -4,7 +4,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        // Tambahkan plugin Google Services
+        classpath 'com.android.tools.build:gradle:8.3.0' // ✅ Tambahkan ini
         classpath 'com.google.gms:google-services:4.4.2'
     }
 }
@@ -16,8 +16,8 @@ allprojects {
     }
 }
 
-// Konfigurasi build folder
 rootProject.buildDir = "../build"
+
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }

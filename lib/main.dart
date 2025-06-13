@@ -33,16 +33,17 @@ class BookMateApp extends StatelessWidget {
   const BookMateApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        textTheme: GoogleFonts.beVietnamProTextTheme(),
-        primarySwatch: Colors.brown,
-      ),
-      home: const SplashScreen(),
-    );
-  }
+Widget build(BuildContext context) {
+  return MaterialApp(
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(
+    useMaterial3: true,
+    colorScheme: ColorScheme.fromSeed(seedColor: Colors.brown),
+    textTheme: GoogleFonts.beVietnamProTextTheme(),
+    ),
+    home: const SplashScreen(),
+  );
+}
 }
 
 class MainPage extends StatefulWidget {
